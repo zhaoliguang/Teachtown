@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item
+		android:id="@+id/view_computer_lessons"
+		android:title="View Computer Lessons" />
+	<item
+		android:id="@+id/choose_facilitator_selected_lessons"
+		android:title="Choose Facilitator Selected Lessons" />
+	<item
+		android:id="@+id/view_generalization_lessons"
+		android:title="View Generalization Lessons"/>	
+</menu>

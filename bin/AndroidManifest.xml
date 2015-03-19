@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hfut.teachtown"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    <uses-permission android:name="android.permission.INTERNET" />
+
+	<!--在SDCard中创建与删除文件权限  -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!--  从SDCard读取数据权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>   
+<uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="17" />
+    <application
+        android:name="com.teachtown.activity.TeachTownApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            
+            android:name="com.teachtown.activity.LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            
+            android:name="com.teachtown.activity.main_scene"
+            android:label="@string/app_name" >
+        </activity>
+         <activity
+              android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+             
+            android:name="com.teachtown.activity.CurriculumActivity"
+            android:label="@string/app_name" >
+        </activity>
+         <activity
+              android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+             
+            android:name="com.teachtown.activity.MainMenuActivity"
+            android:label="@string/app_name" >
+        </activity>
+     	 <activity
+     	      android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+     	     
+            android:name="com.teachtown.activity.ExerciseActivity"
+            android:label="@string/app_name" >
+        </activity>
+         <activity
+              android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+             
+            android:name="com.teachtown.activity.TrialMatchingActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:name="com.teachtown.activity.TestFindActivity"
+            android:label="@string/app_name" >
+        </activity>
+    </application>
+
+</manifest>
