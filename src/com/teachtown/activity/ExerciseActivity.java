@@ -29,7 +29,7 @@ public class ExerciseActivity extends FinalActivity {
 	private List<Exercise> exerciseList;
 	private List<TestResultSync> testResultList;
 	private FinalDb database;
-	
+	private String module;
 	private int lessonHandle;
 	@ViewInject(id=R.id.lv_exercises) HorizontalListView lv_exercises;
 	@Override
@@ -39,6 +39,7 @@ public class ExerciseActivity extends FinalActivity {
 		setContentView(R.layout.exercise);
 		Bundle bundle = this.getIntent().getExtras();
 		lessonHandle = bundle.getInt("lessonHandle");
+		module = bundle.getString("module");
 		database = DatabaseUtil.getDatabase(this);
 		inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		View headerView = inflater.inflate(R.layout.exercise_list_item, null);
@@ -46,7 +47,7 @@ public class ExerciseActivity extends FinalActivity {
 		
 		exerciseList = database.findAllByWhere(Exercise.class, "lessonHandle="+lessonHandle, "exerciseNumber");
 		testResultList = database.findAllByWhere(TestResultSync.class, "lessonHandle="+lessonHandle, "exerciseNumber");
-		exerciseListAdapter = new ExerciseListAdapter(ExerciseActivity.this, lessonHandle,exerciseList,testResultList);
+		exerciseListAdapter = new ExerciseListAdapter(ExerciseActivity.this, lessonHandle,exerciseList,testResultList,database,module);
 		lv_exercises.setAdapter(exerciseListAdapter);
 		
 	}

@@ -14,7 +14,7 @@ public class Lesson {
 	private int subDomainId;
 	private int subSubDomainId;
 	private int rank;
-	private int module;
+	private String module;
 	private int iconAssetId;
 	private int groupId;
 	private int backgroundAssetId;
@@ -69,10 +69,10 @@ public class Lesson {
 	public void setRank(int rank) {
 		this.rank = rank;
 	}
-	public int getModule() {
+	public String getModule() {
 		return module;
 	}
-	public void setModule(int module) {
+	public void setModule(String module) {
 		this.module = module;
 	}
 	public int getIconAssetId() {

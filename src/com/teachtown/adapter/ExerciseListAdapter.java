@@ -1,21 +1,26 @@
 package com.teachtown.adapter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import net.tsz.afinal.FinalDb;
 
 import com.hfut.teachtown.R;
 import com.teachtown.activity.ExerciseActivity;
-import com.teachtown.activity.TestFindActivity;
+import com.teachtown.activity.TrialJointAttentionActivity;
 import com.teachtown.activity.TrialMatchingActivity;
+import com.teachtown.activity.TrialMultipleChoiceActivity;
+import com.teachtown.activity.TrialReceptiveLabeActivity;
 import com.teachtown.model.Domain;
 import com.teachtown.model.Exercise;
 import com.teachtown.model.Lesson;
 import com.teachtown.model.TestResultSync;
+import com.teachtown.model.Trial;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,7 +40,9 @@ public class ExerciseListAdapter extends BaseAdapter implements OnClickListener{
 	private List<TestResultSync> testResultList;
 	private FinalDb dataBase;
 	private int lessonHandle;
-	public ExerciseListAdapter(Context context,int lessonHandle, List<Exercise> exerciseList,List<TestResultSync> testResultList) 
+	private String module;
+	private List<Trial> trialList;
+	public ExerciseListAdapter(Context context,int lessonHandle, List<Exercise> exerciseList,List<TestResultSync> testResultList,FinalDb dataBase,String module) 
 	{
 		
 		super();
@@ -44,6 +51,8 @@ public class ExerciseListAdapter extends BaseAdapter implements OnClickListener{
 		this.exerciseList = exerciseList;
 		this.testResultList = testResultList;
 		this.inflater = LayoutInflater.from(context);
+		this.dataBase = dataBase;
+		this.module = module;
 	}
 	@Override
 	public int getCount() {
@@ -143,11 +152,28 @@ public class ExerciseListAdapter extends BaseAdapter implements OnClickListener{
 	@Override
 	public void onClick(View view) {
 		// TODO Auto-generated method stub
+		trialList = dataBase.findAllByWhere(Trial.class, "lessonHandle="+lessonHandle, "trialId");
+		int numDistractors = trialList.get(0).getNumDistractors();
 		Intent intent = new Intent();
 	    Bundle bundle = new Bundle();
 	    bundle.putInt("lessonHandle", lessonHandle);
-	    intent.putExtras(bundle);
-	    intent.setClass(context, TrialMatchingActivity.class);
+	    if(module.equals("Matching")){
+	    	 intent.putExtras(bundle);
+	    	intent.setClass(context, TrialMatchingActivity.class);
+	    }
+	    else if(module.equals("ReceptiveLabel")){
+	    	 bundle.putInt("numDistractors", numDistractors);
+	    	 intent.putExtras(bundle);
+	    	 intent.setClass(context, TrialReceptiveLabeActivity.class);
+	    	 
+	    }else if(module.equals("JointAttention")){
+	    	 intent.putExtras(bundle);
+	    	intent.setClass(context, TrialJointAttentionActivity.class);
+	    	
+	    }else if(module.equals("MultipleChoice")){
+	    	 intent.putExtras(bundle); 
+	    	intent.setClass(context, TrialMultipleChoiceActivity.class);
+	    }
 		switch(view.getId()){
 		case R.id.tv_pre_test:
 			

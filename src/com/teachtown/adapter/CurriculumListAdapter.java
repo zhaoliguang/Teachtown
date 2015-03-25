@@ -107,6 +107,7 @@ public class CurriculumListAdapter extends BaseAdapter {
 			     
 			     Bundle bundle = new Bundle();
 			     bundle.putInt("lessonHandle", lesson.getLessonHandle());
+			     bundle.putString("module", lesson.getModule());
 			     intent.putExtras(bundle);
 				 context.startActivity(intent);	
 			}
@@ -131,6 +132,12 @@ public class CurriculumListAdapter extends BaseAdapter {
 	public int getCount() {
 		// TODO Auto-generated method stub
 		return lessonList.size();
+	}
+	public List<Lesson> getLessonList() {
+		return lessonList;
+	}
+	public void setLessonList(List<Lesson> lessonList) {
+		this.lessonList = lessonList;
 	}
 	
 	

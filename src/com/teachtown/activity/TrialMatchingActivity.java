@@ -18,19 +18,17 @@ import java.util.TimerTask;
 import com.hfut.teachtown.R;
 import com.nineoldandroids.animation.ObjectAnimator;
 import com.teachtown.component.AssetType;
+import com.teachtown.component.IflytekSpeech;
 import com.teachtown.model.Asset;
 import com.teachtown.model.Trial;
 import com.teachtown.model.TrialAssetMap;
 import com.teachtown.utils.DatabaseUtil;
 
-import android.content.res.AssetManager;
-import android.database.CursorJoiner.Result;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Environment;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import net.tsz.afinal.FinalActivity;
@@ -38,6 +36,8 @@ import net.tsz.afinal.FinalDb;
 import net.tsz.afinal.annotation.view.ViewInject;
 
 public class TrialMatchingActivity extends FinalActivity {
+	
+	private IflytekSpeech iflytekSpeech;
 	private FinalDb database;
 	private int lessonHandle;
 	private List<Trial> trialList;
@@ -50,9 +50,13 @@ public class TrialMatchingActivity extends FinalActivity {
 	private int waiteTime =4000;
 	private  int MapTypeSize = 8;
 	private int matchId;
-	ImageView matchView,distractorView1,distractorView2 ;
+	private ImageView matchView,distractorView1,distractorView2 ;
 	private UpdateImageViewTask updateImageViewTask;
 	private  Timer timer = new Timer();
+	private MediaPlayer mediaPlayer;
+	private int mp3AssetId;
+	private String tiralSpeech;
+	private Random random;
 	int rand;
 	@ViewInject(id = R.id.iv_selected) ImageView iv_selected;
 	@ViewInject(id = R.id.iv_distractor1, click = "imageViewlick") ImageView im_distractor1;
@@ -64,7 +68,11 @@ public class TrialMatchingActivity extends FinalActivity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.trial_matching);
+		
 		trialHashmap = new HashMap<Integer, HashMap<Integer,List<TrialAssetMap>>>();
+		 mediaPlayer = new MediaPlayer();
+		 iflytekSpeech = new IflytekSpeech(TrialMatchingActivity.this);
+		 random = new Random();
 		//初始化allTrialAssetList 
 		allTrialAssetList = new ArrayList<List<TrialAssetMap>>();
 		for(int i=0;i<=MapTypeSize;i++){   
@@ -132,89 +140,6 @@ public class TrialMatchingActivity extends FinalActivity {
 	
 		}
 	}
-	
-	/**
-	private void setImageView(List<Trial> trialList,Map trialHashMap,
-			ImageView seletIv,List<ImageView> distractorIvList){
-		TrialAssetMap trialSelectAssetMap;//选中的资源
-		TrialAssetMap trialMatchSelectAssetMap;//匹配选中的资源
-		TrialAssetMap trialDistractorAssetMap1;//干扰资源1
-		TrialAssetMap trialDistractorAssetMap2;//干扰资源2
-		Collections.shuffle(trialList);//trialList重新随机排序
-		//得到选中的trial，因为已经随机排序所以取第一个即为随机值
-		int selectid = trialList.get(0).getTrialId();
-		HashMap<Integer,List<TrialAssetMap>> selectTriaAssetMap = (HashMap<Integer, List<TrialAssetMap>>) trialHashMap.get(trialList.get(0).getTrialId());
-		int rand = (int)(Math.random()*2)+1;//随机产生1,2
-		//得到选中trial中的mapType为1或2的资源文件
-		List<TrialAssetMap> selectTrialAssetMapList = selectTriaAssetMap.get(rand);
-		//该trial中mapType为1或2的资源文件列表随机排序
-		Collections.shuffle(selectTrialAssetMapList);
-		//得到选中项资源，随机排序后得到的第一项即为随机值
-		trialSelectAssetMap = selectTrialAssetMapList.get(0);
-		
-		//判断该lesson中有几个trial，如果trial数目为三个以上，则干扰项分别除选中的以外另项中抽两个作为干扰项
-		if(trialList.size()>2){
-			//抽取除选中的trial另外选两个干扰项
-			HashMap<Integer,List<TrialAssetMap>> distractortTriaAssetHashMap1 = (HashMap<Integer, List<TrialAssetMap>>) trialHashMap.get(trialList.get(1).getTrialId());
-			HashMap<Integer,List<TrialAssetMap>> distractortTriaAssetHashMap2 = (HashMap<Integer, List<TrialAssetMap>>) trialHashMap.get(trialList.get(2).getTrialId());
-			//选择mapType为1,2的资源作为干扰项
-			List<TrialAssetMap> distractorTrialAssetList1 = distractortTriaAssetHashMap1.get(rand);
-			List<TrialAssetMap> distractorTrialAssetList2 = distractortTriaAssetHashMap2.get(rand);
-			//随机排序map类型为1,2的资源，为下一次随机做准备
-			Collections.shuffle(distractorTrialAssetList1);
-			Collections.shuffle(distractorTrialAssetList2);
-			//得到随机干扰项资源
-			trialDistractorAssetMap1 = distractorTrialAssetList1.get(0);
-			trialDistractorAssetMap2 = distractorTrialAssetList2.get(0);
-		}
-		//若该lesson中trial数目为2个以下，则从另外一个trial中抽两个做为干扰项
-		else{
-			HashMap<Integer,List<TrialAssetMap>> distractortTriaAssetHashMap1 = (HashMap<Integer, List<TrialAssetMap>>) trialHashMap.get(trialList.get(1).getTrialId());
-			List<TrialAssetMap> distractorTrialAssetList1 = distractortTriaAssetHashMap1.get(rand);
-			Collections.shuffle(distractorTrialAssetList1);
-			trialDistractorAssetMap1 = distractorTrialAssetList1.get(0);
-			trialDistractorAssetMap2 = distractorTrialAssetList1.get(1);
-		}
-	
-		
-		int selectAssetId = trialSelectAssetMap.getAssetId();
-		int matchAssetId;
-		int distractorAssetId1 = trialDistractorAssetMap1.getAssetId();
-		int distractorAssetId2 = trialDistractorAssetMap2.getAssetId();
-		int rand1 = (int)(Math.random()*2)+3;//得到随机值3,4
-		//如果为1，代表精准匹配，即选中项和匹配项资源文件相同
-		if(trialList.get(0).getMa_ExactMatches()==1){
-			 matchAssetId = selectAssetId;
-			 trialMatchSelectAssetMap = trialSelectAssetMap;
-		}
-		//若为0，则代表相近匹配，选中项和匹配项属于同一类。匹配项选取mapType为3或4的资源
-		else{
-			List<TrialAssetMap> matchTriaAssetMapList= selectTriaAssetMap.get(rand1);
-			Collections.shuffle(matchTriaAssetMapList);
-			trialMatchSelectAssetMap = matchTriaAssetMapList.get(0);
-			matchAssetId = trialMatchSelectAssetMap.getAssetId();
-			
-		}
-		
-		Collections.shuffle(distractorIvList);//随机排序ImageView，使每次匹配项出现位置不同
-		//把ImageView的id设置为资源id,并设置相应图片，选中项ImageView id不变
-		seletIv.setImageBitmap(getImageFromFile(getFileName(selectAssetId)));
-		
-		distractorIvList.get(0).setId(matchAssetId);
-		distractorIvList.get(0).setImageBitmap(getImageFromFile(getFileName(matchAssetId)));
-		
-		distractorIvList.get(1).setId(distractorAssetId1);
-		distractorIvList.get(1).setImageBitmap(getImageFromFile(getFileName(distractorAssetId1)));
-		
-		distractorIvList.get(2).setId(distractorAssetId2);
-		distractorIvList.get(2).setImageBitmap(getImageFromFile(getFileName(distractorAssetId2)));
-		seletIv.setVisibility(View.VISIBLE);
-//		distractorIvList.get(0).setVisibility(View.VISIBLE);
-//		distractorIvList.get(1).setVisibility(View.VISIBLE);
-//		distractorIvList.get(2).setVisibility(View.VISIBLE);
-		
-	}
-	**/
 	private String getFileName(int assetId){
 		
 		String fileDirectory = String.valueOf(((int)assetId/100)*100);
@@ -232,7 +157,9 @@ public class TrialMatchingActivity extends FinalActivity {
 	  }
 
 	public void updateImageView(ImageView seletIv,List<ImageView> distractorIvList,HashMap<Integer, Integer> map){
+		
 		Collections.shuffle(distractorIvList);//随机排序ImageView，使每次匹配项出现位置不同
+		
 		matchView = distractorIvList.get(0);
 		distractorView1 = distractorIvList.get(1);
 		distractorView2 = distractorIvList.get(2);
@@ -261,6 +188,7 @@ public class TrialMatchingActivity extends FinalActivity {
 		
 		distractorView2.setId(distractorAssetId2);
 		distractorView2.setImageBitmap(getImageFromFile(getFileName(distractorAssetId2)));
+		//IflytekSpeech.startSpeech(TrialMatchingActivity.this, "请给我找出");
 	}
 	
 	private Map getRandomImage(List<Trial> trialList,Map trialHashMap){
@@ -270,7 +198,8 @@ public class TrialMatchingActivity extends FinalActivity {
 		TrialAssetMap trialDistractorAssetMap2;//干扰资源2
 		Collections.shuffle(trialList);//trialList重新随机排序
 		//得到选中的trial，因为已经随机排序所以取第一个即为随机值
-		int selectid = trialList.get(0).getTrialId();
+		Trial trial = trialList.get(0);
+		int selectid = trial.getTrialId();
 		HashMap<Integer,List<TrialAssetMap>> selectTriaAssetMap = (HashMap<Integer, List<TrialAssetMap>>) trialHashMap.get(trialList.get(0).getTrialId());
 		int rand = (int)(Math.random()*2)+1;//随机产生1,2
 		//得到选中trial中的mapType为1或2的资源文件
@@ -280,6 +209,11 @@ public class TrialMatchingActivity extends FinalActivity {
 		//得到选中项资源，随机排序后得到的第一项即为随机值
 		trialSelectAssetMap = selectTrialAssetMapList.get(0);
 		
+		//得到选中trial中的mapType为7的mp3资源文件
+		//List<TrialAssetMap> selectMp3TrialAssetMapList = selectTriaAssetMap.get(7);
+		//mp3AssetId = selectMp3TrialAssetMapList.get(random.nextInt(selectMp3TrialAssetMapList.size())).getAssetId();
+		tiralSpeech = trial.getChineseName();
+		iflytekSpeech.startSpeech( "请找出"+tiralSpeech);
 		//判断该lesson中有几个trial，如果trial数目为三个以上，则干扰项分别除选中的以外另项中抽两个作为干扰项
 		if(trialList.size()>2){
 			//抽取除选中的trial另外选两个干扰项
@@ -364,4 +298,13 @@ public class TrialMatchingActivity extends FinalActivity {
 		}
 		
 	}
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+		 mediaPlayer.release();
+	     mediaPlayer = null;
+	     super.onDestroy();
+	}
+	
 }

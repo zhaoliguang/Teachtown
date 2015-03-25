@@ -1,10 +1,12 @@
 package com.teachtown.activity;
 import java.util.Properties;
 
+import com.iflytek.cloud.SpeechConstant;
+import com.iflytek.cloud.SpeechUtility;
 import com.teachtown.utils.DatabaseUtil;
 
 import android.app.Application;
-import android.os.Handler;
+
 
 public class TeachTownApp extends Application {
 	public static TeachTownApp mApp;
@@ -17,7 +19,7 @@ public class TeachTownApp extends Application {
     }
 	
 	public void initApp(){
-		
+		SpeechUtility.createUtility(TeachTownApp.this, SpeechConstant.APPID +"=550d3ee3"); 
 		 new Thread(){
 
 			@Override

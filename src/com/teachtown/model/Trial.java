@@ -1,13 +1,16 @@
 package com.teachtown.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
 import net.tsz.afinal.annotation.sqlite.Id;
 import net.tsz.afinal.annotation.sqlite.Table;
 
 @Table(name="Trial")
-public class Trial {
+public class Trial implements Parcelable{
 	@Id(column="trialId")
 	private int trialId;
 	private String name;
+	private String chineseName;
 	private int lessonHandle;
 	private int exerciseNumber;
 	private int cueSoundDelaySeconds;
@@ -124,6 +127,22 @@ public class Trial {
 	}
 	public void setModule(String module) {
 		this.module = module;
+	}
+	public String getChineseName() {
+		return chineseName;
+	}
+	public void setChineseName(String chineseName) {
+		this.chineseName = chineseName;
+	}
+	@Override
+	public int describeContents() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public void writeToParcel(Parcel arg0, int arg1) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	
