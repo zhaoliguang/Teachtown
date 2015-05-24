@@ -22,6 +22,15 @@ public class Lesson {
 	private int frameAssetId;
 	private int frameHighlightAssetId;
 	private String description;
+	private String trialName;
+	private String domainName;
+	private String correctPercent;
+	public String getCorrectPercent() {
+		return correctPercent;
+	}
+	public void setCorrectPercent(String correctPercent) {
+		this.correctPercent = correctPercent;
+	}
 	public int getLessonHandle() {
 		return lessonHandle;
 	}
@@ -117,6 +126,18 @@ public class Lesson {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	public String getTrialName() {
+		return trialName;
+	}
+	public void setTrialName(String trialName) {
+		this.trialName = trialName;
+	}
+	public String getDomainName() {
+		return domainName;
+	}
+	public void setDomainName(String domainName) {
+		this.domainName = domainName;
 	}
 	
 	

@@ -104,8 +104,6 @@ public class LessonGridViewAdapter extends BaseAdapter {
 		   holder = (Viewholder) convertView.getTag();
 	   }
 	    
-	    Domain domain = dataBase.findById(lesson.getDomainId(), Domain.class);
-	   List<Trial> TrialeList = dataBase.findAllByWhere(Trial.class, "lessonHandle="+lesson.getLessonHandle());
 	    int lessonHandle = lesson.getLessonHandle();
 	    holder.tv_lesson_name.setText(lesson.getChineseName());   
 	    holder.lesson_info.setOnClickListener(new OnClickListener() {
@@ -211,15 +209,10 @@ public class LessonGridViewAdapter extends BaseAdapter {
 	    
 	    DecimalFormat df=new   java.text.DecimalFormat("#");
 		String score= df.format(correctPercent);
-		holder.tv_scorevalue.setText(score+"%");
-	    holder.tv_lesson_type.setText(domain.getChineseName()); 
-	   StringBuilder trialBuilder = new StringBuilder();
-	  
-	    for(Trial trial:TrialeList){
-	    	trialBuilder.append(trial.getChineseName()).append(",");
-	    	holder.tv_trial_name.setText(trialBuilder.toString());
-	    }
-	   
+		holder.tv_scorevalue.setText(score +"%");
+	    holder.tv_lesson_type.setText(lesson.getDomainName()); 
+
+	    holder.tv_trial_name.setText(lesson.getTrialName());
 	    	
 
 	   return convertView;
@@ -264,5 +257,5 @@ class Viewholder{
 		public ImageView iv_difficult;
 		public ImageView lesson_info;
 		public ImageView iv_level;
-}
+}  
 

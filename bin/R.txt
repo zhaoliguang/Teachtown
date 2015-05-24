@@ -314,10 +314,10 @@ int id iv_language_dev_calendar 0x7f0d0050
 int id iv_language_dev_label 0x7f0d004b
 int id iv_language_dev_speech 0x7f0d004c
 int id iv_language_dev_visual 0x7f0d004f
-int id iv_languagearts_awareness 0x7f0d0049
-int id iv_languagearts_concepts 0x7f0d0046
-int id iv_languagearts_conventions 0x7f0d0047
-int id iv_languagearts_reading 0x7f0d0048
+int id iv_languagearts_awareness 0x7f0d0047
+int id iv_languagearts_concepts 0x7f0d0048
+int id iv_languagearts_conventions 0x7f0d0046
+int id iv_languagearts_reading 0x7f0d0049
 int id iv_level 0x7f0d0044
 int id iv_maths_algebraic 0x7f0d0071
 int id iv_maths_counting 0x7f0d006f

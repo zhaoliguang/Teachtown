@@ -58,6 +58,7 @@
    		android:singleLine="true"
    		android:layout_marginLeft="733dp"
         android:layout_marginTop="175dp"
+        android:inputType="textPassword"
         />
     <ImageView
         android:id="@+id/app_login_btn_submit"
@@ -66,6 +67,7 @@
    		android:layout_marginLeft="535dp"
         android:layout_marginTop="210dp"
    		android:src="@drawable/login_button"
+   		
         />
      <ImageView
         android:id="@+id/app_register"

@@ -355,10 +355,10 @@ public final class R {
         public static final int iv_language_dev_label=0x7f0d004b;
         public static final int iv_language_dev_speech=0x7f0d004c;
         public static final int iv_language_dev_visual=0x7f0d004f;
-        public static final int iv_languagearts_awareness=0x7f0d0049;
-        public static final int iv_languagearts_concepts=0x7f0d0046;
-        public static final int iv_languagearts_conventions=0x7f0d0047;
-        public static final int iv_languagearts_reading=0x7f0d0048;
+        public static final int iv_languagearts_awareness=0x7f0d0047;
+        public static final int iv_languagearts_concepts=0x7f0d0048;
+        public static final int iv_languagearts_conventions=0x7f0d0046;
+        public static final int iv_languagearts_reading=0x7f0d0049;
         public static final int iv_level=0x7f0d0044;
         public static final int iv_maths_algebraic=0x7f0d0071;
         public static final int iv_maths_counting=0x7f0d006f;

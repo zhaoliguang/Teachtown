@@ -37,6 +37,7 @@ import com.teachtown.model.Domain;
 import com.teachtown.model.Lesson;
 import com.teachtown.model.Student;
 import com.teachtown.model.TestResultSync;
+import com.teachtown.model.Trial;
 import com.teachtown.utils.DatabaseUtil;
 import com.teachtown.utils.Md5Utils;
 import com.teachtown.utils.UnityUtils;
@@ -48,6 +49,7 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -98,7 +100,16 @@ public class LoginActivity extends FinalActivity  {
 		btn_Login=(ImageView)findViewById(R.id.app_login_btn_submit);
 		ck_CheckBox=(CheckBox)findViewById(R.id.forget_password);
 		dataBase =  DatabaseUtil.getDatabase(LoginActivity.this);
-		lessonList = dataBase.findAll(Lesson.class);
+		
+		
+//		new Handler().post(new Runnable() {
+//			
+//			@Override
+//			public void run() {
+//				// TODO Auto-generated method stub
+//				updateDatabase();
+//			}
+//		});
 		
 		sp = this.getSharedPreferences("userInfo", Context.MODE_WORLD_READABLE);
 		
@@ -343,4 +354,20 @@ public class LoginActivity extends FinalActivity  {
 				jsonObjRequest.setTag(TAG_REQUEST);	
 				mVolleyQueue.add(JsonArrayRequest);			
 		}	
+	
+//	private void updateDatabase(){
+//		lessonList = dataBase.findAll(Lesson.class);
+//		for(Lesson lesson:lessonList){
+//			List<Domain> domainList = dataBase.findAllByWhere(Domain.class, "lessonHandle="+lesson.getDomainId());
+//			 StringBuilder trialBuilder = new StringBuilder();
+//			  
+//			    for(Domain domain:domainList){
+//			    	trialBuilder.append(domain.getChineseName());
+//			    	
+//			    }
+//			    lesson.setDomainName(trialBuilder.toString());
+//			    dataBase.update(lesson);
+//		}
+//	}
+	
 }

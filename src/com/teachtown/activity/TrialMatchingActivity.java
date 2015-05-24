@@ -85,13 +85,13 @@ public class TrialMatchingActivity extends FinalActivity {
 	private List<Map.Entry<Integer, TestResultSync>> testResultSyncMapSort,testResultPromptSyncMapSort;
 	private List<Map<String,ImageView>> imageViewList;
 	private String sdRootFolder ="/storage/sdcard0" ;
-	//private int duringTime = 3000;测试修改
-	private int duringTime = 1000;
-	//private int animationFadeTime = 3000;测试修改
-	private int animationFadeTime = 1000;
+	private int duringTime = 3000;//测试修改
+	//private int duringTime = 1000;
+	private int animationFadeTime = 3000;//测试修改
+	//private int animationFadeTime = 1000;
 	private int fadeTime = 1000;
-	//private int waiteTime =4000;测试修改
-	private int waiteTime =2000;
+	private int waiteTime =4000;//测试修改
+//	private int waiteTime =2000;
 	private  int MapTypeSize = 8;
 	private String lessonName;
 	private int matchId;

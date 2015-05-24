@@ -91,14 +91,14 @@ public class TrialReceptiveLabeActivity extends FinalActivity implements OnClick
 	private View view;
 	private JsonObjectRequest jsonObjRequest;
 	private RequestQueue mVolleyQueue;
-	//private int duringTime = 3000;测试修改
-	private int duringTime = 1000;
-	//private int animationFadeTime = 2000;测试修改
-	private int animationFadeTime = 1000;
+	private int duringTime = 3000;//测试修改
+	//private int duringTime = 1000;
+	private int animationFadeTime = 2000;//测试修改
+	//private int animationFadeTime = 1000;
 	private int fadeTime = 1000;
 	
-	//private int waiteTime =4000;测试修改
-	private int waiteTime =2000;
+	private int waiteTime =4000;//测试修改
+	//private int waiteTime =2000;
 	private int allCount = 30;
 	private double noPromptTestAllCount=0,correctCount=0,wrongCount=0,promptAllTestCount=0,allTestCount=0,selectTestCount;
 	
