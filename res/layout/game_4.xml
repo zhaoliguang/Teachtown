@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gameinterface_bottom" >
+
+   <ImageView
+        android:id="@+id/choose2border_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/choose2Border_left"
+        android:src="@drawable/game4interface_chooseborder" />
+
+    <ImageView
+        android:id="@+id/choose2border2_2_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/choose2Border2_2_left"
+        android:src="@drawable/game4interface_chooseborder_2" />
+   
+    <ImageView
+        android:id="@+id/choose2border2_3_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/choose2Border2_3_top"
+        android:layout_alignLeft="@id/choose2border2_2_iv"
+        android:src="@drawable/game4interface_chooseborder_2" />
+
+    <ImageView
+        android:id="@+id/choose2border2_1_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/choose2border2_2_iv"
+        android:layout_marginTop="@dimen/choose2Border2_1_top"
+        android:src="@drawable/game4interface_chooseborder_2" />
+ </RelativeLayout>
+

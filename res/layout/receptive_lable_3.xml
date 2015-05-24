@@ -1,50 +1,162 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/pre_class"
-    android:padding="20dp"
-    android:orientation="vertical" >
-	
-	<RelativeLayout
-   		android:layout_width="match_parent"
-    	android:layout_height="match_parent"
-    	android:gravity="center_horizontal"
-    	
-    	>
+    android:id="@+id/rr_receptive_label_3"
+    android:background="@drawable/gameinterface_bottom" >
+    
+      <View android:id="@+id/reveptive_label3_emiter_top_left"
+        android:layout_gravity="top|left"
+        android:layout_alignParentLeft="true"
+        android:layout_width="1dp"
+        android:layout_height="1dp" />
+    
+    <View android:id="@+id/reveptive_label3_emiter_top_right"
+        android:layout_gravity="top|right"
+        android:layout_alignParentRight="true"
+        android:layout_width="1dp"
+        android:layout_height="1dp" />
+	 <View android:id="@+id/receptive_label3_emiter_center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        
+        android:layout_width="1dp"
+        android:layout_height="1dp" />
+    <ImageView
+        android:id="@+id/teacher_standby_iv_label3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/teacher_top"
+        android:layout_marginLeft="@dimen/teacher_left"
+        android:src="@drawable/gameinterface_teacher_instruction" />
 
-		<ImageView
-		    android:id="@+id/im_select3"
-		    android:layout_width="150dip"
-		    android:layout_height="150dip"
-		    android:layout_marginTop="50dp"
-		    
-		    android:src="@drawable/result" />
+    <ImageView
+        android:id="@+id/desktop_iv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/desktop_top"
+        android:src="@drawable/gameinterface_desktop" />
 
-	    <ImageView 
-	        android:id="@+id/im_distractor3_distractor1"
-	        android:layout_width="150dip"
-	    	android:layout_height="150dip" 
-	    	android:layout_marginLeft="40dip"
-	    	 android:layout_marginTop="50dp"
-	    	android:layout_toRightOf="@+id/im_select3"
-	    	android:src="@drawable/result"/>
-	
-	   <ImageView
-	        android:id="@+id/im_distractor3_distractor2"
-	        android:layout_width="150dip"
-	    	android:layout_height="150dip" 
-	    	android:layout_below="@+id/im_select3"
-	    	android:layout_marginTop="20dp"
-	    	android:src="@drawable/result"/>
-	   <ImageView 
-	        android:id="@+id/im_distractor3_distractor3"
-	        android:layout_width="150dip"
-	    	android:layout_height="150dip" 
-	    	android:layout_marginLeft="40dip"
-	    	android:layout_marginTop="20dp"
-	    	android:layout_below="@+id/im_distractor3_distractor1"
-	    	android:layout_toRightOf="@+id/im_distractor3_distractor2"
-	    	android:src="@drawable/result"/>
-		</RelativeLayout>
-</LinearLayout>
+       <ImageView
+            android:id="@+id/im_distractor3_distractor3_square"
+        android:layout_width="@dimen/chooseBorder_size"
+        android:layout_height="@dimen/chooseBorder_size"
+        android:layout_marginTop="@dimen/chooseBorder_top"
+        android:layout_centerHorizontal="true" 
+        android:scaleType="fitXY"
+        android:src="@drawable/gameinterface_chooseborder_2" />
+    <ImageView
+         android:id="@+id/im_select3_square"
+        android:layout_width="@dimen/chooseBorder_size"
+        android:layout_height="@dimen/chooseBorder_size"
+        android:scaleType="fitXY"
+        android:layout_marginTop="@dimen/chooseBorder_top"       
+        android:layout_marginLeft="@dimen/chooseBorder2_1_left"
+        android:src="@drawable/gameinterface_chooseborder_2" />
+
+    <ImageView
+         android:id="@+id/im_distractor3_distractor1_square"
+        android:layout_width="@dimen/chooseBorder_size"
+        android:layout_height="@dimen/chooseBorder_size"
+        android:layout_marginLeft="@dimen/chooseBorder2_1_left"
+        android:layout_marginTop="@dimen/chooseBorder2_top"
+        android:scaleType="fitXY"
+        android:src="@drawable/gameinterface_chooseborder_2" />
+
+    <ImageView
+        android:id="@+id/im_distractor3_distractor2_square"
+        android:layout_width="@dimen/chooseBorder_size"
+        android:layout_height="@dimen/chooseBorder_size"
+         android:scaleType="fitXY"
+        android:layout_marginTop="@dimen/chooseBorder2_top"
+        android:layout_centerHorizontal="true"     
+        android:src="@drawable/gameinterface_chooseborder_2" />
+         <VideoView
+        android:id="@+id/webView_distractor3_distractor3"
+       android:layout_width="@dimen/white_size"
+         android:background="#00000000"
+        android:layout_height="@dimen/white_size"
+      android:layout_marginTop="@dimen/white_0_top"
+        android:layout_centerHorizontal="true" 
+        />
+      <ImageView
+        android:id="@+id/im_distractor3_distractor3"
+        android:layout_width="@dimen/white_size"
+        android:layout_height="@dimen/white_size"
+        android:layout_marginTop="@dimen/white_0_top"
+        android:layout_centerHorizontal="true" 
+        android:scaleType="fitXY"
+        android:src="@drawable/white" />
+      
+          <VideoView
+        android:id="@+id/webView_select3"
+       android:layout_width="@dimen/white_size"
+        android:layout_height="@dimen/white_size"
+          android:background="#00000000"
+       android:layout_marginTop="@dimen/white_0_top"       
+        android:layout_marginLeft="@dimen/white_1_left"
+        />
+    
+    <ImageView        
+        android:id="@+id/im_select3"
+        android:layout_width="@dimen/white_size"
+        android:layout_height="@dimen/white_size"
+       android:scaleType="fitXY"
+        android:layout_marginTop="@dimen/white_0_top"       
+        android:layout_marginLeft="@dimen/white_1_left"
+        android:src="@drawable/white" />
+
+      
+<VideoView
+        android:id="@+id/webView_distractor3_distractor1"
+     android:layout_width="@dimen/white_size"
+        android:layout_height="@dimen/white_size"
+          android:background="#00000000"
+        android:layout_marginLeft="@dimen/white_1_left"
+        android:layout_marginTop="@dimen/white_1_top"
+        />
+    <ImageView
+        android:id="@+id/im_distractor3_distractor1"
+        android:layout_width="@dimen/white_size"
+        android:layout_height="@dimen/white_size"
+        android:layout_marginLeft="@dimen/white_1_left"
+        android:layout_marginTop="@dimen/white_1_top"
+        android:scaleType="fitXY"
+        android:src="@drawable/white" />
+    
+ <VideoView
+        android:id="@+id/webView_distractor3_distractor2"
+       android:layout_width="@dimen/white_size"
+        android:layout_height="@dimen/white_size"
+          android:background="#00000000"
+        android:layout_marginTop="@dimen/white_1_top"
+        android:layout_centerHorizontal="true"    
+        />
+    <ImageView
+        android:id="@+id/im_distractor3_distractor2"
+        android:layout_width="@dimen/white_size"
+        android:layout_height="@dimen/white_size"
+         android:scaleType="fitXY"
+        android:layout_marginTop="@dimen/white_1_top"
+        android:layout_centerHorizontal="true"     
+        android:src="@drawable/white" />  
+        
+    <ImageView android:id="@+id/button_prompt_receptive_label3" 
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content" 
+        android:layout_marginLeft="61dp" 
+        android:layout_marginTop="44dp" 
+        android:text="非提示" 
+        android:layout_toLeftOf="@+id/reveptive_label3_emiter_top_right" 
+        android:onClick="buttonClick" 
+        android:src="@drawable/prompt_close"
+        android:layout_alignTop="@id/teacher_standby_iv_label1"/>
+
+  
+
+ </RelativeLayout>
+
+ 
+
+   
+    

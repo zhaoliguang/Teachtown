@@ -6,35 +6,58 @@ import net.tsz.afinal.annotation.sqlite.Id;
 import net.tsz.afinal.annotation.sqlite.Table;
 @Table(name="TestResult_Sync")
 public class TestResultSync {
-	@Id(column="id")
-	private int id;
+	@Id(column="sessionGuid")
 	private String sessionGuid;
-	private Date dateTaken;
-	private String testResultGuid;
+	public double getPromptCorrectCount() {
+		return promptCorrectCount;
+	}
+	public void setPromptCorrectCount(double promptCorrectCount) {
+		this.promptCorrectCount = promptCorrectCount;
+	}
+	public double getPercentPrompted() {
+		return percentPrompted;
+	}
+	public void setPercentPrompted(double percentPrompted) {
+		this.percentPrompted = percentPrompted;
+	}
+	public double getPromptTestCount() {
+		return promptTestCount;
+	}
+	public void setPromptTestCount(double promptTestCount2) {
+		this.promptTestCount = promptTestCount2;
+	}
+	private String dateTaken;
+	
+	private int testResultGuid;
 	private int lessonHandle;
-	private int exerciseNumber;
-	private int durationSeconds;
-	private int percentCorrect;
-	private int percentPrompted;
+	private int trialId;
+	private String exerciseName;
+	private String lessonName;
+	private double promptCorrectCount;
+	private double percentCorrect;
+	private double percentPrompted;
 	private int percentTimeout;
 	private int finalPromptLevel;
-	private int pauseDuration;
+	private double promptTestCount;
+	private double testCount;
+	private double correctCount;
+	private int studentId;
 	public String getSessionGuid() {
 		return sessionGuid;
 	}
 	public void setSessionGuid(String sessionGuid) {
 		this.sessionGuid = sessionGuid;
 	}
-	public Date getDateTaken() {
+	public String getDateTaken() {
 		return dateTaken;
 	}
-	public void setDateTaken(Date dateTaken) {
+	public void setDateTaken(String dateTaken) {
 		this.dateTaken = dateTaken;
 	}
-	public String getTestResultGuid() {
+	public int getTestResultGuid() {
 		return testResultGuid;
 	}
-	public void setTestResultGuid(String testResultGuid) {
+	public void setTestResultGuid(int testResultGuid) {
 		this.testResultGuid = testResultGuid;
 	}
 	public int getLessonHandle() {
@@ -43,30 +66,20 @@ public class TestResultSync {
 	public void setLessonHandle(int lessonHandle) {
 		this.lessonHandle = lessonHandle;
 	}
-	public int getExerciseNumber() {
-		return exerciseNumber;
+	public int getTrialId() {
+		return trialId;
 	}
-	public void setExerciseNumber(int exerciseNumber) {
-		this.exerciseNumber = exerciseNumber;
+	public void setTrialId(int trialId) {
+		this.trialId = trialId;
 	}
-	public int getDurationSeconds() {
-		return durationSeconds;
-	}
-	public void setDurationSeconds(int durationSeconds) {
-		this.durationSeconds = durationSeconds;
-	}
-	public int getPercentCorrect() {
+	
+	public double getPercentCorrect() {
 		return percentCorrect;
 	}
-	public void setPercentCorrect(int percentCorrect) {
-		this.percentCorrect = percentCorrect;
+	public void setPercentCorrect(double correctPercent) {
+		this.percentCorrect = correctPercent;
 	}
-	public int getPercentPrompted() {
-		return percentPrompted;
-	}
-	public void setPercentPrompted(int percentPrompted) {
-		this.percentPrompted = percentPrompted;
-	}
+	
 	public int getPercentTimeout() {
 		return percentTimeout;
 	}
@@ -79,11 +92,36 @@ public class TestResultSync {
 	public void setFinalPromptLevel(int finalPromptLevel) {
 		this.finalPromptLevel = finalPromptLevel;
 	}
-	public int getPauseDuration() {
-		return pauseDuration;
+	
+	public String getExerciseName() {
+		return exerciseName;
 	}
-	public void setPauseDuration(int pauseDuration) {
-		this.pauseDuration = pauseDuration;
+	public void setExerciseName(String exerciseName) {
+		this.exerciseName = exerciseName;
+	}
+	public int getStudentId() {
+		return studentId;
+	}
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
+	}
+	public double getTestCount() {
+		return testCount;
+	}
+	public void setTestCount(double testCount2) {
+		this.testCount = testCount2;
+	}
+	public double getCorrectCount() {
+		return correctCount;
+	}
+	public void setCorrectCount(double correct) {
+		this.correctCount = correct;
+	}
+	public String getLessonName() {
+		return lessonName;
+	}
+	public void setLessonName(String lessonName) {
+		this.lessonName = lessonName;
 	}
 	
 }

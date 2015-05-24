@@ -58,6 +58,7 @@ public class CurriculumListAdapter extends BaseAdapter {
 	    convertView = inflater.inflate(R.layout.curriculum_list_item,
 	    		parent,false);
 	    holder = new Holder();
+	    holder.ll_lesson_title = (View)convertView.findViewById(R.id.ll_lesson_title);
 	    holder.icon_big_iv = ((ImageView) convertView
 	      .findViewById(R.id.icon_big_iv));
 	    holder.tv_lesson_name = ((TextView) convertView
@@ -97,8 +98,8 @@ public class CurriculumListAdapter extends BaseAdapter {
 	    Domain domain = dataBase.findById(lesson.getDomainId(), Domain.class);
 	    List<Exercise> exerciseList = dataBase.findAllByWhere(Exercise.class, "lessonHandle="+lesson.getLessonHandle());
 	    
-	    holder.tv_lesson_name.setText(lesson.getName());   
-	    holder.tv_lesson_name.setOnClickListener(new OnClickListener() {
+	    holder.tv_lesson_name.setText(lesson.getChineseName());   
+	    holder.ll_lesson_title.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
@@ -112,10 +113,10 @@ public class CurriculumListAdapter extends BaseAdapter {
 				 context.startActivity(intent);	
 			}
 		});
-	    holder.tv_domain_name.setText(domain.getName()); 
+	    holder.tv_domain_name.setText(domain.getChineseName()); 
 	    String exerciseString="";
 	    for(Exercise exercise:exerciseList){
-	    	exerciseString+=exercise.getExerciseNumber()+"."+exercise.getName()+"\n";
+	    	exerciseString+=exercise.getExerciseNumber()+"."+exercise.getChineseName()+"\n";
 	    }
 	    holder.tv_exercises.setText(exerciseString);
 	    
@@ -143,6 +144,7 @@ public class CurriculumListAdapter extends BaseAdapter {
 	
 	}
 class Holder{
+		public View ll_lesson_title;
 		public ImageView icon_big_iv;
 		public TextView tv_lesson_name;
 		public ImageView small_icon_iv;

@@ -25,13 +25,15 @@
     <application
         android:name="com.teachtown.activity.TeachTownApp"
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/icon_green"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
              android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-            
+            android:configChanges="orientation|keyboardHidden"
             android:name="com.teachtown.activity.LoginActivity"
+            android:screenOrientation="landscape"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,50 +42,151 @@
         </activity>
         <activity
              android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-            
+              android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape"
             android:name="com.teachtown.activity.main_scene"
             android:label="@string/app_name" >
         </activity>
          <activity
               android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-             
+               android:configChanges="orientation|keyboardHidden"
+             android:screenOrientation="landscape"
             android:name="com.teachtown.activity.CurriculumActivity"
             android:label="@string/app_name" >
         </activity>
          <activity
               android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-             
+               android:configChanges="orientation|keyboardHidden"
+             android:screenOrientation="landscape"
             android:name="com.teachtown.activity.MainMenuActivity"
             android:label="@string/app_name" >
         </activity>
      	 <activity
      	      android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-     	     
+     	       android:configChanges="orientation|keyboardHidden"
+     	     android:screenOrientation="landscape"
             android:name="com.teachtown.activity.ExerciseActivity"
             android:label="@string/app_name" >
         </activity>
          <activity
               android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-             
+               android:configChanges="orientation|keyboardHidden"
+             android:screenOrientation="landscape"
             android:name="com.teachtown.activity.TrialMatchingActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
+            android:hardwareAccelerated="true"  
              android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+              android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape"
             android:name="com.teachtown.activity.TrialReceptiveLabeActivity"
             android:label="@string/app_name" >
         </activity>
          <activity
              android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+              android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape"
             android:name="com.teachtown.activity.TrialJointAttentionActivity"
             android:label="@string/app_name" >
         </activity>
        <activity
              android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+              android:configChanges="orientation|keyboardHidden"
             android:name="com.teachtown.activity.TrialMultipleChoiceActivity"
+            android:screenOrientation="landscape"
             android:label="@string/app_name" >
         </activity>
-      
+               <activity
+             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+              android:configChanges="orientation|keyboardHidden"
+            android:name="com.teachtown.activity.LanguageArtsActivity"
+            android:screenOrientation="landscape"
+            android:label="@string/app_name" >
+        </activity>
+               <activity
+             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+              android:configChanges="orientation|keyboardHidden"
+            android:name="com.teachtown.activity.LanguageDevelopmentActivity"
+            android:screenOrientation="landscape"
+            android:label="@string/app_name" >
+        </activity>
+               <activity
+             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+              android:configChanges="orientation|keyboardHidden"
+            android:name="com.teachtown.activity.AdaptiveSkillsActivity"
+            android:screenOrientation="landscape"
+            android:label="@string/app_name" >
+        </activity>
+               <activity
+             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+              android:configChanges="orientation|keyboardHidden"
+            android:name="com.teachtown.activity.CognitiveSkillActivity"
+           android:screenOrientation="landscape"
+            android:label="@string/app_name" >
+        </activity>
+               <activity
+             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+              android:configChanges="orientation|keyboardHidden"
+            android:name="com.teachtown.activity.MathsActivity"
+           android:screenOrientation="landscape"
+            android:label="@string/app_name" >
+        </activity> 
+         <activity
+             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+              android:configChanges="orientation|keyboardHidden"
+            android:name="com.teachtown.activity.SocialEmotionalActivity"
+           android:screenOrientation="landscape"
+            android:label="@string/app_name" >
+        </activity> 
+         <activity
+             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+              android:configChanges="orientation|keyboardHidden"
+            android:name="com.teachtown.activity.LessonActivity"
+            android:screenOrientation="landscape"
+            android:label="@string/app_name" >
+        </activity>
+         <activity
+             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+              android:configChanges="orientation|keyboardHidden"
+            android:name="com.teachtown.activity.ShowTestResult"
+            android:screenOrientation="landscape"
+            android:label="@string/app_name" >
+        </activity>
+         <activity
+             android:theme="@android:style/Theme.Dialog"
+              android:configChanges="orientation|keyboardHidden"
+            android:name="com.teachtown.activity.GamePopActivity"
+            android:screenOrientation="landscape"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+              android:configChanges="orientation|keyboardHidden"
+            android:name="com.cosina.game.kickkick.KickKick"
+            android:screenOrientation="landscape"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+              android:configChanges="orientation|keyboardHidden"
+            android:name="com.mololovecode.airdream.game.GameViewActivity"
+            android:screenOrientation="landscape"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="edu.upenn.cis350.simplegraphics.GameActivity"
+             android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+             android:screenOrientation="landscape"
+            android:label="@string/app_name" >
+            
+        </activity>
+        <activity android:name="wyf.tzz.gdl.MyGame"
+             android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  android:label="@string/app_name">
+       </activity>
     </application>
 
 </manifest>

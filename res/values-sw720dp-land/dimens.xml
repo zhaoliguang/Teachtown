@@ -2,8 +2,42 @@
 
     <!--
          Customize dimensions originally defined in res/values/dimens.xml (such as
-         screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
+         screen margins) for sw600dp devices (e.g. 7" tablets) here.
     -->
-    <dimen name="activity_horizontal_margin">128dp</dimen>
+    <dimen name="default_center_margin">16dp</dimen>
+     <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <dimen name="margin">8dp</dimen>
+
+    <dimen name="header_text_size">20sp</dimen>
+    <dimen name="title_text_size">18sp</dimen>
+    <dimen name="button_text_size">16sp</dimen>
+    <dimen name="sample_text_size">12sp</dimen>
+    <dimen name="chooseBorder_size">500px</dimen>
+    <dimen name="chooseBorder_top">60dp</dimen>
+    <dimen name="chooseBorder_left">250dp</dimen>
+    <dimen name="teacher_top">25dp</dimen>
+    <dimen name="teacher_left">500dp</dimen>
+    <dimen name="desktop_top">457dp</dimen>
+    <dimen name="chooseBorder2_top">420dp</dimen>
+    <dimen name="chooseBorder2_1_left">70dp</dimen>
+	<dimen name="chooseBorder2_3_left">700dp</dimen>
+	
+	<dimen name="choose2Border_left">200dp</dimen>
+    <dimen name="choose2Border2_2_left">600dp</dimen>
+    <dimen name="choose2Border2_1_top">50dp</dimen>
+	<dimen name="choose2Border2_3_top">490dp</dimen>
+	
+	<dimen name="chooseBorder_5_size">360px</dimen>
+	<dimen name="chooseBorder9_left">145dp</dimen>
+    <dimen name="chooseBorder3_left">700dp</dimen>
+    <dimen name="chooseBorder12_top">40dp</dimen>
+	<dimen name="chooseBorder6_top">500dp</dimen>	
+	<dimen name="chooseBorder10_5_top">85dp</dimen>
+    <dimen name="chooseBorder10_5_left">220dp</dimen>
+    <dimen name="chooseBorder4_5_top">455dp</dimen>
+	<dimen name="chooseBorder1_5_top">85dp</dimen>	
+	<dimen name="chooseBorder1_5_left">625dp</dimen>
+    <dimen name="chooseBorder7_5_top">455dp</dimen>
 </resources>

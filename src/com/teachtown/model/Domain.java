@@ -10,6 +10,7 @@ public class Domain {
 	private int domainType;
 	private int curriculumId;
 	private String name;
+	private String chineseName;
 	private String description;
 	private int iconAssetId;
 	private int iconHighlightAssetId;
@@ -36,6 +37,12 @@ public class Domain {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public String getChineseName() {
+		return chineseName;
+	}
+	public void setChineseName(String chineseName) {
+		this.chineseName = chineseName;
 	}
 	public String getDescription() {
 		return description;

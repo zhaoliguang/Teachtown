@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/game_5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/yellow_export" >
+
+    <ImageView
+        android:id="@+id/chooseborder_9_iv"
+        android:layout_width="@dimen/chooseBorder_5_size"
+        android:layout_height="@dimen/chooseBorder_5_size"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/chooseBorder9_left"
+        android:src="@drawable/game5interface_chooseborder_2" />
+    
+    <ImageView
+        android:id="@+id/chooseborder_3_iv" 
+        android:layout_width="@dimen/chooseBorder_5_size"
+        android:layout_height="@dimen/chooseBorder_5_size"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/chooseBorder3_left"
+        android:src="@drawable/game5interface_chooseborder_2" />
+   
+     <ImageView
+        android:id="@+id/chooseborder_12_iv"
+        android:layout_width="@dimen/chooseBorder_5_size"
+        android:layout_height="@dimen/chooseBorder_5_size"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/chooseBorder12_top"
+        android:src="@drawable/game5interface_chooseborder_2" />
+    
+    <ImageView
+        android:id="@+id/chooseborder_6_iv"
+        android:layout_width="@dimen/chooseBorder_5_size"
+        android:layout_height="@dimen/chooseBorder_5_size"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/chooseBorder6_top"
+        android:src="@drawable/game5interface_chooseborder_2" />
+
+   <ImageView
+        android:id="@+id/chooseborder_10_5_iv"
+        android:layout_width="@dimen/chooseBorder_5_size"
+        android:layout_height="@dimen/chooseBorder_5_size"
+        android:layout_marginTop="@dimen/chooseBorder10_5_top"
+        android:layout_marginLeft="@dimen/chooseBorder10_5_left"
+        android:src="@drawable/game5interface_chooseborder_2" />
+    
+    <ImageView
+        android:id="@+id/chooseborder_7_5_iv"
+        android:layout_width="@dimen/chooseBorder_5_size"
+        android:layout_height="@dimen/chooseBorder_5_size"
+        android:layout_marginTop="@dimen/chooseBorder7_5_top"
+        android:layout_marginLeft="@dimen/chooseBorder10_5_left"
+        android:src="@drawable/game5interface_chooseborder_2" />
+   
+     <ImageView
+        android:id="@+id/chooseborder_1_5_iv"
+        android:layout_width="@dimen/chooseBorder_5_size"
+        android:layout_height="@dimen/chooseBorder_5_size"
+        android:layout_marginTop="@dimen/chooseBorder1_5_top"
+        android:layout_marginLeft="@dimen/chooseBorder1_5_left"
+        android:clickable="true"
+        android:src="@drawable/game5interface_chooseborder_2" />
+     
+     <ImageView
+        android:id="@+id/chooseborder_4_5_iv"
+        android:layout_width="@dimen/chooseBorder_5_size"
+        android:layout_height="@dimen/chooseBorder_5_size"
+        android:layout_marginTop="@dimen/chooseBorder4_5_top"
+        android:layout_marginLeft="@dimen/chooseBorder1_5_left"
+        android:clickable="true"
+        android:src="@drawable/game5interface_chooseborder_2" />
+
+        
+     <ImageView 
+        android:id="@+id/centerimage_iv"
+        android:layout_width="@dimen/chooseBorder_5_size"
+        android:layout_height="@dimen/chooseBorder_5_size"
+        android:layout_centerInParent="true"
+        android:src="@drawable/game5interface_chooseborder_2" /> 
+  
+ </RelativeLayout>
+

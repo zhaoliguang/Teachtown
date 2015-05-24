@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_gameinterface_bottom"
+    android:background="@drawable/gameinterface_bottom" >
+
+    <View android:id="@+id/emiter_top_left"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_width="1dp"
+        android:layout_height="1dp" />
+    
+    <View android:id="@+id/emiter_top_right"
+        android:layout_gravity="top|right"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_width="1dp"
+        android:layout_height="1dp" />
+    
+      <View android:id="@+id/emiter_center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"       
+        android:layout_width="1dp"
+        android:layout_height="1dp" />
+
+   <ImageView
+        android:id="@+id/chooseborder_iv_square"
+        android:layout_width="@dimen/chooseBorder_size"
+        android:layout_height="@dimen/chooseBorder_size"
+        android:scaleType="fitXY"
+        android:layout_marginTop="@dimen/chooseBorder_top"
+        android:layout_marginLeft="@dimen/chooseBorder_left"
+        android:src="@drawable/gameinterface_chooseborder" />
+   
+    <ImageView
+        android:id="@+id/teacher_standby_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/teacher_top"
+        android:layout_marginLeft="@dimen/teacher_left"
+        android:src="@drawable/gameinterface_teacher_instruction" />
+    
+     <!--android:layout_alignParentBottom="true"-->
+     <ImageView
+        android:id="@+id/desktop_iv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/desktop_top"
+        android:src="@drawable/gameinterface_desktop" />
+ 
+    <ImageView
+        android:id="@+id/chooseborder2_2_iv_square"
+        android:layout_width="@dimen/chooseBorder_size"
+        android:layout_height="@dimen/chooseBorder_size"
+        android:scaleType="fitXY"   
+        android:layout_marginTop="@dimen/chooseBorder2_top"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/gameinterface_chooseborder_2" />
+   
+    <ImageView
+        android:id="@+id/chooseborder2_1_iv_square"
+        android:layout_width="@dimen/chooseBorder_size"
+        android:layout_height="@dimen/chooseBorder_size"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="@dimen/chooseBorder2_3_left"
+        android:layout_marginTop="@dimen/chooseBorder2_top"
+        android:src="@drawable/gameinterface_chooseborder_2" />
+    
+    <ImageView
+        android:id="@+id/chooseborder2_3_iv_square"
+        android:layout_width="@dimen/chooseBorder_size"
+        android:layout_height="@dimen/chooseBorder_size"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="@dimen/chooseBorder2_1_left"
+        android:layout_marginTop="@dimen/chooseBorder2_top"
+        android:src="@drawable/gameinterface_chooseborder_2" />
+    
+    
+    <ImageView
+        android:id="@+id/chooseborder_iv"
+        android:layout_width="@dimen/white_size"
+        android:layout_height="@dimen/white_size"
+        android:scaleType="fitXY"
+        android:layout_marginTop="@dimen/white_0_top"
+        android:layout_marginLeft="@dimen/white_0_left"
+        android:src="@drawable/white" />
+    
+    
+    <ImageView
+        android:id="@+id/chooseborder2_2_iv"
+        android:layout_width="@dimen/white_size"
+        android:layout_height="@dimen/white_size"
+        android:scaleType="fitXY"   
+        android:layout_marginTop="@dimen/white_1_top"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/white" />
+   
+    <ImageView
+        android:id="@+id/chooseborder2_3_iv"
+        android:layout_width="@dimen/white_size"
+        android:layout_height="@dimen/white_size"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="@dimen/white_1_left"
+        android:layout_marginTop="@dimen/white_1_top"
+        android:src="@drawable/white" />
+    
+    <ImageView
+        android:id="@+id/chooseborder2_1_iv"
+        android:layout_width="@dimen/white_size"
+        android:layout_height="@dimen/white_size"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="@dimen/white_3_left"
+        android:layout_marginTop="@dimen/white_1_top"
+        android:src="@drawable/white" />
+    <ImageView
+        android:id="@+id/button_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/chooseborder_iv"
+        android:src="@drawable/prompt_close"
+        android:layout_toLeftOf="@id/emiter_top_right"
+        android:text="非提示" />
+    
+       
+ </RelativeLayout>
+ 
+
+
+ 

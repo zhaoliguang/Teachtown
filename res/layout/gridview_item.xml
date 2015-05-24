@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="5dp"
+    android:background="@drawable/listview_item_background"
+    
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/lesson_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="5dp">
+
+        <ImageView
+            android:id="@+id/lesson_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@drawable/lesson_name" />
+
+        <TextView
+            android:id="@+id/tv_lesson_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+             android:textColor="#000000"
+            android:textSize="28sp"
+            android:text="课程名" />
+
+        <TextView
+            android:id="@+id/tv_trial_name"
+            android:layout_below="@+id/tv_lesson_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+             android:layout_marginLeft="22dp"
+             android:textSize="22sp"
+             android:singleLine="true"
+             android:textColor="#000000"
+             android:ems="8"
+            android:text="眼睛，鼻子，耳朵" />
+        <TextView
+            android:id="@+id/tv_lesson_type"
+            android:layout_below="@+id/tv_trial_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+             android:layout_marginLeft="25dp"
+              android:textColor="#000000"
+             android:textSize="17sp"
+            android:text="适应性" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/diffcult_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_marginLeft="20dp"
+         android:layout_alignTop="@id/lesson_name"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/lesson_name" >
+
+        <TextView
+            android:id="@+id/tx_diffcult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF0000"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:text="难度" />
+
+        <ImageView
+            android:id="@+id/iv_difficult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tx_diffcult"
+            android:src="@drawable/difficulty_0star" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/score_layout"
+        android:layout_toRightOf="@+id/diffcult_layout"
+          android:layout_alignTop="@id/lesson_name"
+          android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tx_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:text="正确率" />
+
+        <TextView
+            android:id="@+id/tv_scorevalue"
+            android:layout_below="@+id/tx_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="35sp"
+            android:layout_marginTop="15dp"
+            android:textColor="#000000"
+            android:text="100" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/score_layout" >
+
+        <ImageView
+            android:id="@+id/iv_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@drawable/lv00_stone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

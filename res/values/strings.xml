@@ -2,7 +2,7 @@
 <resources>
 
     
-        <string name="app_name">TeachTown</string>
+    <string name="app_name">愿行</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="login_title1">welcome to TeachTown</string>

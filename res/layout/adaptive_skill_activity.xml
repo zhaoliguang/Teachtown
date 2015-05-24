@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/adaptive_skill_background"
+    android:background="@drawable/adaptive_skill_background" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="463dp"
+        android:layout_x="-123dp"
+        android:layout_y="0dp"
+        android:src="@drawable/adaptive_skill_dialog" />
+
+    <ImageView
+        android:id="@+id/iv_adaptive_community_living"
+        android:layout_width="156dp"
+        android:layout_height="141dp"
+        android:layout_x="100dp"
+        android:layout_y="290dp"
+        android:src="@drawable/adaptive_community_living" />
+
+    <ImageView
+        android:id="@+id/iv_adaptive_liveing"
+        android:layout_width="141dp"
+        android:layout_height="139dp"
+        android:layout_x="50dp"
+        android:layout_y="70dp"
+        android:src="@drawable/adaptive_liveing" />
+
+    <ImageView
+        android:id="@+id/iv_adaptive_prevocational"
+        android:layout_width="138dp"
+        android:layout_height="135dp"
+        android:layout_x="290dp"
+        android:layout_y="45dp"
+        android:src="@drawable/adaptive_prevocational" />
+
+    <ImageView
+        android:id="@+id/iv_adaptive_self_awareness"
+        android:layout_width="150dp"
+        android:layout_height="141dp"
+        android:layout_x="180dp"
+        android:layout_y="150dp"
+        android:src="@drawable/adaptive_self_awareness" />
+
+    <ImageView
+        android:id="@+id/iv_adaptive_health"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_x="280dp"
+        android:layout_y="260dp"
+        android:src="@drawable/adaptive_health" />
+
+</AbsoluteLayout>

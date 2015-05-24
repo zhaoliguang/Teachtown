@@ -18,7 +18,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:gravity="center"
-            android:text="Exercise"
+            android:text="练习"
             android:textSize="30sp" />
     </LinearLayout>
 
@@ -35,7 +35,7 @@
 	                android:layout_height="fill_parent"
 	                android:textSize="30sp"
 	                android:gravity="center"
-	                android:text="Pre-Text" />
+	                android:text="预测试" />
 	        </LinearLayout>
 
 	        <LinearLayout
@@ -51,7 +51,7 @@
 	                android:layout_height="fill_parent"
 	                android:textSize="30sp"
 	                android:gravity="center"
-	                android:text="Prompt" />
+	                android:text="提示" />
 	        </LinearLayout>
 
 	        <LinearLayout
@@ -66,7 +66,7 @@
 	                android:layout_width="fill_parent"
 	                android:layout_height="fill_parent"
 	                android:gravity="center"
-	                android:text="Prompt-level1"
+	                android:text="提示级别1"
 	                android:textSize="30sp" />
 
 	        </LinearLayout>
@@ -84,7 +84,7 @@
 	                android:layout_height="fill_parent"
 	                 android:textSize="30sp"
 	                android:gravity="center"
-	                android:text="Prompt-level2" />
+	                android:text="提示级别2" />
 	        </LinearLayout>
 
 	        <LinearLayout
@@ -100,7 +100,7 @@
 	                android:layout_width="fill_parent"
 	                android:layout_height="fill_parent"
 	                android:gravity="center"
-	                android:text="Post-Test"
+	                android:text="课后测试"
 	                android:textSize="30sp" />
 	            
 	        </LinearLayout>

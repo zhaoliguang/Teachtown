@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:id="@+id/maths_backound"
+    android:background="@drawable/maths_backound">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="844dp"
+        android:layout_height="399dp"
+        android:layout_x="13dp"
+        android:layout_y="13dp"
+        android:src="@drawable/maths_dialog" />
+
+    <ImageView
+        android:id="@+id/iv_maths_counting"
+        android:layout_width="149dp"
+        android:layout_height="149dp"
+        android:layout_x="230dp"
+        android:layout_y="85dp"
+        android:src="@drawable/maths_counting" />
+
+    <ImageView
+        android:id="@+id/iv_maths_geometry"
+        android:layout_width="170dp"
+        android:layout_height="144dp"
+        android:layout_x="372dp"
+        android:layout_y="44dp"
+        android:src="@drawable/maths_geometry" />
+
+    <ImageView
+        android:id="@+id/iv_maths_algebraic"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_x="490dp"
+        android:layout_y="164dp"
+        android:src="@drawable/maths_algebraic" />
+
+    <ImageView
+        android:id="@+id/iv_maths_measurements"
+        android:layout_width="190dp"
+        android:layout_height="153dp"
+        android:layout_x="310dp"
+        android:layout_y="206dp"
+        android:src="@drawable/maths_measurements" />
+
+</AbsoluteLayout>

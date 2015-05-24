@@ -2,4 +2,5 @@
 <resources>
     <color name="text_lgray">#808080</color>
     <color name="text_gray">#323232</color>
+    <color name="dialog_background">#f6c598</color>
 </resources>

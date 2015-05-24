@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:id="@+id/social_emotional_background"
+    android:background="@drawable/social_emotional_background">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="856dp"
+        android:layout_height="454dp"
+        android:layout_x="22dp"
+        android:layout_y="5dp"
+        android:src="@drawable/social_emotional_dialog" />
+
+    <ImageView
+        android:id="@+id/iv_social_leisure"
+        android:layout_width="143dp"
+        android:layout_height="161dp"
+        android:layout_x="250dp"
+        android:layout_y="23dp"
+        android:src="@drawable/social_leisure" />
+
+    <ImageView
+        android:id="@+id/iv_social_awareness"
+        android:layout_width="147dp"
+        android:layout_height="147dp"
+        android:layout_x="453dp"
+        android:layout_y="52dp"
+        android:src="@drawable/social_awareness" />
+
+    <ImageView
+        android:id="@+id/iv_social_relations"
+        android:layout_width="144dp"
+        android:layout_height="144dp"
+        android:layout_x="150dp"
+        android:layout_y="160dp"
+        android:src="@drawable/social_relations" />
+
+    <ImageView
+        android:id="@+id/iv_social_emotions"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_x="331dp"
+        android:layout_y="170dp"
+        android:src="@drawable/social_emotion" />
+
+    <ImageView
+        android:id="@+id/iv_social_attention"
+        android:layout_width="151dp"
+        android:layout_height="151dp"
+        android:layout_x="549dp"
+        android:layout_y="187dp"
+        android:src="@drawable/social_attention" />
+
+</AbsoluteLayout>

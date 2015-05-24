@@ -4,7 +4,6 @@ package com.teachtown.activity;
 
 import java.util.List;
 
-import com.devsmart.android.ui.HorizontalListView;
 import com.hfut.teachtown.R;
 import com.teachtown.adapter.ExerciseListAdapter;
 import com.teachtown.model.Exercise;
@@ -31,7 +30,7 @@ public class ExerciseActivity extends FinalActivity {
 	private FinalDb database;
 	private String module;
 	private int lessonHandle;
-	@ViewInject(id=R.id.lv_exercises) HorizontalListView lv_exercises;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -48,7 +47,6 @@ public class ExerciseActivity extends FinalActivity {
 		exerciseList = database.findAllByWhere(Exercise.class, "lessonHandle="+lessonHandle, "exerciseNumber");
 		testResultList = database.findAllByWhere(TestResultSync.class, "lessonHandle="+lessonHandle, "exerciseNumber");
 		exerciseListAdapter = new ExerciseListAdapter(ExerciseActivity.this, lessonHandle,exerciseList,testResultList,database,module);
-		lv_exercises.setAdapter(exerciseListAdapter);
 		
 	}
 	

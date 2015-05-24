@@ -10,6 +10,7 @@
 		android:background="#B8B8B8"  
 		android:visibility="visible" />  
 	<LinearLayout
+	    android:id="@+id/ll_lesson_title"
 	    android:layout_width="300dp"
 	    android:layout_height="80dp"
 	    android:layout_marginLeft="10dip"
@@ -71,7 +72,7 @@
 		                              android:layout_width="wrap_content"
 		                              android:layout_height="wrap_content"
 		                              android:gravity="center"
-		                              android:text="Level 1 out of 5"
+		                              android:text="级别1"
 		                              android:textSize="15dip" 
 		                              android:textColor="#000000"/>
 	                          </LinearLayout>
@@ -120,7 +121,7 @@
 	                android:layout_height="wrap_content"
 	                android:layout_marginTop="32dip"
 	                android:layout_gravity="center"
-	                android:text="NotStarted"
+	                android:text="未开始"
 	                android:textSize="15dip"
 	                android:textColor="#000000" />
 	        </LinearLayout>
@@ -165,7 +166,7 @@
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
 	                android:gravity="center"
-	                android:text="The level of this lesson is at the current level of this student"
+	                android:text="该课程的级别为当前学生的级别"
 	                android:textSize="15dip"
 	                android:textColor="#000000" />
 	        </LinearLayout>

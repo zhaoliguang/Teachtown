@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="margin">8dp</dimen>
+
+    <dimen name="header_text_size">20sp</dimen>
+    <dimen name="title_text_size">18sp</dimen>
+    <dimen name="button_text_size">16sp</dimen>
+    <dimen name="sample_text_size">12sp</dimen>
+
+     <dimen name="default_center_margin">16dp</dimen>
+     
+     <dimen name="chooseBorder_top">70dp</dimen>
+    <dimen name="chooseBorder_left">330dp</dimen>
+    <dimen name="teacher_top">35dp</dimen>
+    <dimen name="teacher_left">700dp</dimen>
+    <dimen name="desktop_top">700dp</dimen>
+    <dimen name="chooseBorder2_2_top">420dp</dimen>
+    <dimen name="chooseBorder2_1_left">180dp</dimen>
+	<dimen name="chooseBorder2_3_left">820dp</dimen>
+	
+	<dimen name="choose2Border_left">103dp</dimen>
+    <dimen name="choose2Border2_2_left">205dp</dimen>
+    <dimen name="choose2Border2_1_top">50dp</dimen>
+	<dimen name="choose2Border2_3_top">305dp</dimen>
+</resources>

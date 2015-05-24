@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:id="@+id/language_arts_background"
+    android:background="@drawable/language_arts_background">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="419dp"
+        android:layout_x="135dp"
+        android:layout_y="11dp"
+        android:src="@drawable/language_arts_dialog" />
+
+    <ImageView
+        android:id="@+id/iv_languagearts_conventions"
+        android:layout_width="147dp"
+        android:layout_height="147dp"
+        android:layout_x="545dp"
+        android:layout_y="128dp"
+        android:src="@drawable/languagearts_conventions" />
+
+    <ImageView
+        android:id="@+id/iv_languagearts_awareness"
+        android:layout_width="144dp"
+        android:layout_height="144dp"
+        android:layout_x="713dp"
+        android:layout_y="82dp"
+        android:src="@drawable/languagearts_awareness" />
+
+    <ImageView
+        android:id="@+id/iv_languagearts_reading"
+        android:layout_width="147dp"
+        android:layout_height="147dp"
+        android:layout_x="563dp"
+        android:layout_y="287dp"
+        android:src="@drawable/languagearts_reading" />
+
+    <ImageView
+        android:id="@+id/iv_languagearts_concepts"
+        android:layout_width="154dp"
+        android:layout_height="154dp"
+        android:layout_x="731dp"
+        android:layout_y="235dp"
+        android:src="@drawable/languagearts_concepts" />
+
+</AbsoluteLayout>

@@ -26,6 +26,7 @@ public class Trial implements Parcelable{
 	private int ol_TrialType;
 	private int postSoundAssetId;
 	private String module;
+	private int speechFlag;
 	public int getTrialId() {
 		return trialId;
 	}
@@ -112,6 +113,12 @@ public class Trial implements Parcelable{
 	}
 	public int getOl_TrialType() {
 		return ol_TrialType;
+	}
+	public int getSpeechFlag() {
+		return speechFlag;
+	}
+	public void setSpeechFlag(int speechFlag) {
+		this.speechFlag = speechFlag;
 	}
 	public void setOl_TrialType(int ol_TrialType) {
 		this.ol_TrialType = ol_TrialType;

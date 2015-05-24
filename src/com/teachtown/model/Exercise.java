@@ -10,6 +10,7 @@ public class Exercise {
 	private int lessonHandle;
 	private int exerciseNumber;
 	private String name;
+	private String chineseName;
 	public int getLessonHandle() {
 		return lessonHandle;
 	}
@@ -27,6 +28,18 @@ public class Exercise {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public String getChineseName() {
+		return chineseName;
+	}
+	public void setChineseName(String chineseName) {
+		this.chineseName = chineseName;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 

@@ -76,40 +76,27 @@ public class ExerciseListAdapter extends BaseAdapter implements OnClickListener{
 	public View getView(int position, View convertView, ViewGroup parent)
 	{
 		// TODO Auto-generated method stub
-		ViewHolder holder;
+		ViewPlac holder;
 		if (convertView == null) {
 	    convertView = inflater.inflate(R.layout.exercise_list_item,
 	    		parent,false);
-	    holder = new ViewHolder();
-	    holder.tv_exercise = ((TextView) convertView
-	  	      .findViewById(R.id.tv_exercise));
+	    holder = new ViewPlac();
 	    holder.tv_pre_test = ((TextView) convertView
-	      .findViewById(R.id.tv_pre_test));
-	    holder.tv_prompt = ((TextView) convertView
-	  	      .findViewById(R.id.tv_prompt));
-	    holder.tv_prompt_level1 = ((TextView) convertView
-	  	      .findViewById(R.id.tv_prompt_level1));
-	    holder.tv_prompt_level2 = ((TextView) convertView
-	  	      .findViewById(R.id.tv_prompt_level2));
-	    holder.tv_post_test = ((TextView) convertView
-	  	      .findViewById(R.id.tv_post_test));
+	  	      .findViewById(R.id.tv_lesson_name));
+	    holder.tv_pre_test = ((TextView) convertView
+	      .findViewById(R.id.tv_trial_name));
+	    holder.tv_pre_test = ((TextView) convertView
+	  	      .findViewById(R.id.tv_lesson_type));
+	    holder.tv_pre_test = ((TextView) convertView
+	  	      .findViewById(R.id.tv_scorevalue));
+	    holder.tv_pre_test = ((TextView) convertView
+	  	      .findViewById(R.id.iv_difficult));
+	    holder.tv_pre_test = ((TextView) convertView
+	  	      .findViewById(R.id.iv_level));
 	    convertView.setTag(holder);
 	    
-	    // 设置表格内容宽度，与表头对应
-//	    holder.item1bjzb.setWidth(w * 0);
-//	    holder.item2bjzb.setWidth(w * 3);
-//	    holder.item3bjzb.setWidth(w * 6);
-//	    holder.item4bjzb.setWidth(w * 6);
-//
-//
-//	    holder.item1bjzb.setText("");
-//	    holder.item2bjzb.setText("");
-//	    holder.item3bjzb.setText("");
-//	    holder.item4bjzb.setText("");
-	    // holder.item4bjzb.setText("");
-	    // holder.item5bjzb.setText("");
 	   } else {
-		   holder = (ViewHolder) convertView.getTag();
+		   holder = (ViewPlac) convertView.getTag();
 	   }
 		Exercise exercise = exerciseList.get(position);
 		if(position==0){
@@ -129,7 +116,7 @@ public class ExerciseListAdapter extends BaseAdapter implements OnClickListener{
 //				    holder.tv_prompted.setText(testResult.getPercentPrompted()); 
 //				    holder.tv_prompt_level.setText(testResult.getFinalPromptLevel()); 
 //			    }
-			holder.tv_exercise.setText(exercise.getName());
+			holder.tv_exercise.setText(exercise.getChineseName());
 			holder.tv_pre_test.setText("-");
 			holder.tv_prompt.setText("-");
 			holder.tv_prompt_level1.setText("-");
@@ -194,13 +181,13 @@ public class ExerciseListAdapter extends BaseAdapter implements OnClickListener{
 	}
 }
 }
-class ViewHolder{
-	public TextView tv_exercise;
+class ViewPlac{
 	public TextView tv_pre_test;
+	public TextView tv_exercise;
 	public TextView tv_prompt;
 	public TextView tv_prompt_level1;
 	public TextView tv_prompt_level2;
-	public TextView tv_post_test;	
+	public TextView tv_post_test;
 }
 
 

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:id="@+id/congnitive_skill_background"
+    android:background="@drawable/congnitive_skill_background">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="1202dp"
+        android:layout_height="425dp"
+        android:layout_x="-147dp"
+        android:layout_y="20dp"
+        android:src="@drawable/congnitive_skill_dialog" />
+
+    <ImageView
+        android:id="@+id/iv_congnitive_fiction"
+        android:layout_width="123dp"
+        android:layout_height="123dp"
+        android:layout_x="118dp"
+        android:layout_y="175dp"
+        android:src="@drawable/congnitive_fiction" />
+
+    <ImageView
+        android:id="@+id/iv_congnitive_feature_class"
+        android:layout_width="129dp"
+        android:layout_height="129dp"
+        android:layout_x="236dp"
+        android:layout_y="274dp"
+        android:src="@drawable/congnitive_feature_class" />
+
+    <ImageView
+        android:id="@+id/iv_congnitive_sorting"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_x="461dp"
+        android:layout_y="260dp"
+        android:src="@drawable/congnitive_sorting" />
+
+    <ImageView
+        android:id="@+id/iv_congnitive_discriminations"
+        android:layout_width="133dp"
+        android:layout_height="133dp"
+        android:layout_x="338dp"
+        android:layout_y="153dp"
+        android:src="@drawable/congnitive_discriminations" />
+
+    <ImageView
+        android:id="@+id/iv_congnitive_shapes"
+        android:layout_width="141dp"
+        android:layout_height="141dp"
+        android:layout_x="600dp"
+        android:layout_y="169dp"
+        android:src="@drawable/congnitive_shapes" />
+
+</AbsoluteLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/language_development_background"
+   	android:background="@drawable/language_development_background">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="1882dp"
+        android:layout_height="404dp"
+        android:layout_x="-364dp"
+        android:layout_y="10dp"
+        android:src="@drawable/language_development_dialog" />
+
+    <ImageView
+        android:id="@+id/iv_language_dev_label"
+        android:layout_width="129dp"
+        android:layout_height="129dp"
+        android:layout_x="294dp"
+        android:layout_y="106dp"
+        android:src="@drawable/language_dev_label" />
+
+    <ImageView
+        android:id="@+id/iv_language_dev_speech"
+        android:layout_width="127dp"
+        android:layout_height="127dp"
+        android:layout_x="432dp"
+        android:layout_y="43dp"
+        android:src="@drawable/language_dev_speech" />
+
+    <ImageView
+        android:id="@+id/iv_language_dev_auditory_dis"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_x="580dp"
+        android:layout_y="40dp"
+        android:src="@drawable/language_dev_auditory_dis" />
+
+    <ImageView
+        android:id="@+id/iv_language_dev_auditory_pro"
+        android:layout_width="132dp"
+        android:layout_height="132dp"
+        android:layout_x="718dp"
+        android:layout_y="80dp"
+        android:src="@drawable/language_dev_auditory_pro" />
+
+    <ImageView
+        android:id="@+id/iv_language_dev_visual"
+        android:layout_width="153dp"
+        android:layout_height="132dp"
+        android:layout_x="403dp"
+        android:layout_y="199dp"
+        android:src="@drawable/language_dev_visual" />
+
+    <ImageView
+        android:id="@+id/iv_language_dev_calendar"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_x="578dp"
+        android:layout_y="195dp"
+        android:src="@drawable/iv_language_dev_calendar" />
+
+</AbsoluteLayout>

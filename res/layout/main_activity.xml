@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/scene">
+
+    <ImageView
+        android:id="@+id/im_adaptive_skills"
+        android:layout_width="177dp"
+        android:layout_height="136dp"
+        android:layout_x="675dp"
+        android:layout_y="29dp"
+        android:src="@drawable/adaptive_skills" />
+
+    <ImageView
+        android:id="@+id/im_maths"
+        android:layout_width="199dp"
+        android:layout_height="182dp"
+        android:layout_x="311dp"
+        android:layout_y="208dp"
+        android:src="@drawable/maths" />
+
+    <ImageView
+        android:id="@+id/im_social_emotional"
+        android:layout_width="235dp"
+        android:layout_height="187dp"
+        android:layout_x="35dp"
+        android:layout_y="254dp"
+        android:src="@drawable/social_emotional" />
+
+    <ImageView
+        android:id="@+id/im_language_development"
+        android:layout_width="253dp"
+        android:layout_height="186dp"
+        android:layout_x="580dp"
+        android:layout_y="250dp"
+        android:src="@drawable/language_development" />
+
+    <ImageView
+        android:id="@+id/im_language_arts"
+        android:layout_width="155dp"
+        android:layout_height="154dp"
+        android:layout_x="86dp"
+        android:layout_y="18dp"
+        android:src="@drawable/language_arts" />
+
+    <ImageView
+        android:id="@+id/im_cognitive_skills"
+        android:layout_width="226dp"
+        android:layout_height="128dp"
+        android:layout_x="326dp"
+        android:layout_y="18dp"
+        android:src="@drawable/congnitive_skills" />
+
+</AbsoluteLayout>

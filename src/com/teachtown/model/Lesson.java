@@ -9,6 +9,7 @@ public class Lesson {
 	private int lessonHandle;
 	private int curriculumId;
 	private String name;
+	private String chineseName;
 	private int masterDomainId;
 	private int domainId;
 	private int subDomainId;
@@ -38,6 +39,12 @@ public class Lesson {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public String getChineseName() {
+		return chineseName;
+	}
+	public void setChineseName(String chineseName) {
+		this.chineseName = chineseName;
 	}
 	public int getMasterDomainId() {
 		return masterDomainId;
